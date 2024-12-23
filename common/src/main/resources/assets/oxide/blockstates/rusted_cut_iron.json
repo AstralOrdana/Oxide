@@ -2,31 +2,34 @@
   "variants": {
     "": [
       {
-        "model": "oxide:block/rusted_cut_iron_0"
+        "model": "oxide:block/rusted_cut_iron/0"
       },
       {
-        "model": "oxide:block/rusted_cut_iron_1"
+        "model": "oxide:block/rusted_cut_iron/1"
       },
       {
-        "model": "oxide:block/rusted_cut_iron_2"
+        "model": "oxide:block/rusted_cut_iron/2"
       },
       {
-        "model": "oxide:block/rusted_cut_iron_3"
+        "model": "oxide:block/rusted_cut_iron/3"
       },
       {
-        "model": "oxide:block/rusted_cut_iron_4"
+        "model": "oxide:block/rusted_cut_iron/4"
       },
       {
-        "model": "oxide:block/rusted_cut_iron_5"
+        "model": "oxide:block/rusted_cut_iron/5"
       },
       {
-        "model": "oxide:block/rusted_cut_iron_6"
+        "model": "oxide:block/rusted_cut_iron/6"
       },
       {
-        "model": "oxide:block/rusted_cut_iron_7"
+        "model": "oxide:block/rusted_cut_iron/7"
       },
       {
-        "model": "oxide:block/rusted_cut_iron_8"
+        "model": "oxide:block/rusted_cut_iron/8"
+      },
+      {
+        "model": "oxide:block/rusted_cut_iron/9"
       }
     ]
   }

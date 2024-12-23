@@ -1,6 +1,6 @@
 {
   "parent": "minecraft:block/cube_all",
   "textures": {
-    "all": "oxide:block/rusted_cut_iron_8"
+    "all": "oxide:block/rusted_cut_iron/2"
   }
 }
