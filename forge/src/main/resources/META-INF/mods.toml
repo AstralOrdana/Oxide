@@ -7,7 +7,7 @@ license="LGPLv3"
 
 [[mods]]
 
-modId="template_mod"
+modId="oxide"
 
 version = "${version}"
 
@@ -19,26 +19,26 @@ credits="Ordana"
 
 authors="Ordana"
 
-itemIcon="template_mod:template"
+itemIcon="oxide:template"
 description='''
 Template Mod Description
 '''
 
-[[dependencies.template_mod]]
+[[dependencies.oxide]]
     modId="forge"
     mandatory=true
     versionRange="[40,)"
     ordering="NONE"
     side="BOTH"
 
-[[dependencies.template_mod]]
+[[dependencies.oxide]]
     modId="minecraft"
     mandatory=true
     versionRange="[1.20.1]"
     ordering="NONE"
     side="BOTH"
 
-[[dependencies.template_mod]]
+[[dependencies.oxide]]
     modId="moonlight"
     mandatory=true
     versionRange="[1.20-2.13.30,]"

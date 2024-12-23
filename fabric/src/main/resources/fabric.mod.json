@@ -1,6 +1,6 @@
 {
   "schemaVersion": 1,
-  "id": "template_mod",
+  "id": "oxide",
   "version": "${version}",
   "name": "Template Mod",
   "description": "Template Mod Description",
@@ -8,20 +8,20 @@
     "Ordana"
   ],
   "contact": {
-    "homepage": "https://www.curseforge.com/minecraft/mc-mods/template_mod",
-    "sources": "https://github.com/AstralOrdana/template_mod"
+    "homepage": "https://www.curseforge.com/minecraft/mc-mods/oxide",
+    "sources": "https://github.com/AstralOrdana/oxide"
   },
   "license": "LGPLv3",
   "icon": "icon.png",
   "environment": "*",
   "entrypoints": {
     "main": [
-      "com.ordana.template_mod.fabric.TemplateModFabric"
+      "com.ordana.oxide.fabric.OxideFabric"
     ]
   },
   "mixins": [
-    "template_mod.mixins.json",
-    "template_mod-common.mixins.json"
+    "oxide.mixins.json",
+    "oxide-common.mixins.json"
   ],
   "depends": {
     "fabric": "*",

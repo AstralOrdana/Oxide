@@ -1,0 +1,9 @@
+{
+  "itemGroup.oxide.oxide": "Oxide",
+  "entity.oxide.mod_entity": "Mod Entity",
+  "item.oxide.mod_item": "Mod Item",
+  "block.oxide.mod_block": "Mod Block",
+
+
+  "block.oxide.rusted_cut_iron": "Rusted Cut Iron"
+}
