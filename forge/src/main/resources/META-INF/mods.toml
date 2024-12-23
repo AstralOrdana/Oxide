@@ -1,0 +1,46 @@
+
+modLoader="javafml"
+
+loaderVersion="[40,)"
+
+license="LGPLv3"
+
+[[mods]]
+
+modId="template_mod"
+
+version = "${version}"
+
+displayName="Template Mod"
+
+logoFile="icon.png"
+
+credits="Ordana"
+
+authors="Ordana"
+
+itemIcon="template_mod:template"
+description='''
+Template Mod Description
+'''
+
+[[dependencies.template_mod]]
+    modId="forge"
+    mandatory=true
+    versionRange="[40,)"
+    ordering="NONE"
+    side="BOTH"
+
+[[dependencies.template_mod]]
+    modId="minecraft"
+    mandatory=true
+    versionRange="[1.20.1]"
+    ordering="NONE"
+    side="BOTH"
+
+[[dependencies.template_mod]]
+    modId="moonlight"
+    mandatory=true
+    versionRange="[1.20-2.13.30,]"
+    ordering="NONE"
+    side="BOTH"
