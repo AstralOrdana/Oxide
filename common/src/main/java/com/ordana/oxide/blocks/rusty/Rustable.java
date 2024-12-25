@@ -16,6 +16,7 @@ import net.minecraft.world.level.block.Blocks;
 import net.minecraft.world.level.block.ChangeOverTimeBlock;
 import net.minecraft.world.level.block.state.BlockBehaviour;
 import net.minecraft.world.level.block.state.BlockState;
+import net.minecraft.world.level.material.Fluids;
 
 import java.util.Optional;
 import java.util.function.Supplier;
@@ -107,7 +108,35 @@ public interface Rustable extends ChangeOverTimeBlock<Rustable.RustLevel> {
 
     //same as the base one but has configurable radius
     @Override
-    default void applyChangeOverTime(BlockState state, ServerLevel serverLevel, BlockPos pos, RandomSource randomSource) {
+    default void applyChangeOverTime(BlockState state, ServerLevel level, BlockPos pos, RandomSource randomSource) {
+
+        int airCheck = 0;
+        int wetness = 0;
+        for (Direction dir : Direction.values()) {
+            var dirPos = pos.relative(dir);
+            var dirState = level.getBlockState(dirPos);
+            if (dirState.isAir()) airCheck += 1;
+
+            if (level.isRainingAt(dirPos)) {
+                if (dir == Direction.UP) wetness += 5;
+                wetness += 1;
+            }
+            if (level.getFluidState(dirPos).is(Fluids.WATER)) wetness += 5;
+            if (dirState.is(Blocks.BUBBLE_COLUMN)) wetness += 10;
+            if (dirState.getBlock() instanceof Rustable rusty) {
+                if (rusty.getNext(dirState).isEmpty()) wetness += 100;
+            }
+        }
+        if (airCheck == 0) return;
+
+        for (int i = 0; i < wetness; i++) {
+            if (level.random.nextInt(50) == 1) {
+                this.getNext(state).ifPresent(s -> level.setBlockAndUpdate(pos, s));
+                return;
+            }
+        }
+
+        /*
         int age = this.getAge().ordinal();
         int j = 0;
         int k = 0;
@@ -146,9 +175,14 @@ public interface Rustable extends ChangeOverTimeBlock<Rustable.RustLevel> {
             this.getNext(state).ifPresent(s -> serverLevel.setBlockAndUpdate(pos, s));
         }
 
+         */
+
     }
 
     default void tryWeather(BlockState state, ServerLevel level, BlockPos pos, RandomSource random) {
+        applyChangeOverTime(state, level, pos, random);
+
+        /*
         if (!state.is(ModTags.RUSTED_IRON)) {
             var canWeather = false;
             for (Direction direction : Direction.values()) {
@@ -179,6 +213,8 @@ public interface Rustable extends ChangeOverTimeBlock<Rustable.RustLevel> {
                 applyChangeOverTime(state, level, pos, random);
             }
         }
+
+         */
     }
 
     static BlockBehaviour.Properties setRandomTicking(BlockBehaviour.Properties properties, RustLevel rustLevel) {
