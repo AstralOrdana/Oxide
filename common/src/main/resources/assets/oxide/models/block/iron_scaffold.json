@@ -1,4 +1,5 @@
 {
+	"parent": "oxide:block/scaffold",
 	"textures": {
 		"scaffold": "oxide:block/iron_scaffold/side",
 		"top": "oxide:block/iron_scaffold/top"
