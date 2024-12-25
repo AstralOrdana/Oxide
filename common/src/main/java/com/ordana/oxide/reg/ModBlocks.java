@@ -8,12 +8,10 @@ import net.mehvahdjukaar.moonlight.api.set.BlockSetAPI;
 import net.mehvahdjukaar.moonlight.api.set.leaves.LeavesType;
 import net.minecraft.world.item.BlockItem;
 import net.minecraft.world.item.Item;
-import net.minecraft.world.level.block.Block;
-import net.minecraft.world.level.block.Blocks;
-import net.minecraft.world.level.block.IronBarsBlock;
-import net.minecraft.world.level.block.SlabBlock;
+import net.minecraft.world.level.block.*;
 import net.minecraft.world.level.block.state.BlockBehaviour;
 import net.minecraft.world.level.block.state.properties.BlockSetType;
+import net.minecraft.world.level.block.state.properties.NoteBlockInstrument;
 
 import java.util.function.Supplier;
 
@@ -36,6 +34,53 @@ public class ModBlocks {
         return block;
     }
 
+
+    //plate iron
+    public static final Supplier<Block> PLATE_IRON = regWithItem("plate_iron", () ->
+            new RustableBlock(Rustable.RustLevel.UNAFFECTED, BlockBehaviour.Properties.copy(Blocks.IRON_BLOCK)));
+    public static final Supplier<Block> WEATHERED_PLATE_IRON = regWithItem("weathered_plate_iron", () ->
+            new RustableBlock(Rustable.RustLevel.WEATHERED, BlockBehaviour.Properties.copy(Blocks.IRON_BLOCK)));
+    public static final Supplier<Block> RUSTED_PLATE_IRON = regWithItem("rusted_plate_iron", () ->
+            new RustableBlock(Rustable.RustLevel.RUSTED, BlockBehaviour.Properties.copy(Blocks.IRON_BLOCK)));
+
+    public static final Supplier<Block> PLATE_IRON_STAIRS = regWithItem("plate_iron_stairs", () ->
+            new RustableStairsBlock(Rustable.RustLevel.UNAFFECTED, PLATE_IRON, BlockBehaviour.Properties.copy(Blocks.IRON_BLOCK)));
+    public static final Supplier<Block> WEATHERED_PLATE_IRON_STAIRS = regWithItem("weathered_plate_iron_stairs", () ->
+            new RustableStairsBlock(Rustable.RustLevel.WEATHERED, PLATE_IRON, BlockBehaviour.Properties.copy(Blocks.IRON_BLOCK)));
+    public static final Supplier<Block> RUSTED_PLATE_IRON_STAIRS = regWithItem("rusted_plate_iron_stairs", () ->
+            new RustableStairsBlock(Rustable.RustLevel.RUSTED, PLATE_IRON, BlockBehaviour.Properties.copy(Blocks.IRON_BLOCK)));
+
+    public static final Supplier<Block> PLATE_IRON_SLAB = regWithItem("plate_iron_slab", () ->
+            new RustableSlabBlock(Rustable.RustLevel.UNAFFECTED, BlockBehaviour.Properties.copy(Blocks.IRON_BLOCK)));
+    public static final Supplier<Block> WEATHERED_PLATE_IRON_SLAB = regWithItem("weathered_plate_iron_slab", () ->
+            new RustableSlabBlock(Rustable.RustLevel.WEATHERED, BlockBehaviour.Properties.copy(Blocks.IRON_BLOCK)));
+    public static final Supplier<Block> RUSTED_PLATE_IRON_SLAB = regWithItem("rusted_plate_iron_slab", () ->
+            new RustableSlabBlock(Rustable.RustLevel.RUSTED, BlockBehaviour.Properties.copy(Blocks.IRON_BLOCK)));
+
+    //waxed
+    public static final Supplier<Block> WAXED_PLATE_IRON = regWithItem("waxed_plate_iron", () ->
+            new Block(noTick(Blocks.IRON_BLOCK)));
+    public static final Supplier<Block> WAXED_WEATHERED_PLATE_IRON = regWithItem("waxed_weathered_plate_iron", () ->
+            new Block(noTick(Blocks.IRON_BLOCK)));
+    public static final Supplier<Block> WAXED_RUSTED_PLATE_IRON = regWithItem("waxed_rusted_plate_iron", () ->
+            new Block(noTick(Blocks.IRON_BLOCK)));
+
+    public static final Supplier<Block> WAXED_PLATE_IRON_STAIRS = regWithItem("waxed_plate_iron_stairs", () ->
+            new ModStairBlock(WAXED_PLATE_IRON, noTick(Blocks.IRON_BLOCK)));
+    public static final Supplier<Block> WAXED_WEATHERED_PLATE_IRON_STAIRS = regWithItem("waxed_weathered_plate_iron_stairs", () ->
+            new ModStairBlock(WAXED_WEATHERED_PLATE_IRON, noTick(Blocks.IRON_BLOCK)));
+    public static final Supplier<Block> WAXED_RUSTED_PLATE_IRON_STAIRS = regWithItem("waxed_rusted_plate_iron_stairs", () ->
+            new ModStairBlock(WAXED_RUSTED_PLATE_IRON, noTick(Blocks.IRON_BLOCK)));
+
+    public static final Supplier<Block> WAXED_PLATE_IRON_SLAB = regWithItem("waxed_plate_iron_slab", () ->
+            new SlabBlock(noTick(Blocks.IRON_BLOCK)));
+    public static final Supplier<Block> WAXED_WEATHERED_PLATE_IRON_SLAB = regWithItem("waxed_weathered_plate_iron_slab", () ->
+            new SlabBlock(noTick(Blocks.IRON_BLOCK)));
+    public static final Supplier<Block> WAXED_RUSTED_PLATE_IRON_SLAB = regWithItem("waxed_rusted_plate_iron_slab", () ->
+            new SlabBlock(noTick(Blocks.IRON_BLOCK)));
+
+
+    //cut iron
     public static final Supplier<Block> CUT_IRON = regWithItem("cut_iron", () ->
             new RustableBlock(Rustable.RustLevel.UNAFFECTED, BlockBehaviour.Properties.copy(Blocks.IRON_BLOCK)));
     public static final Supplier<Block> WEATHERED_CUT_IRON = regWithItem("weathered_cut_iron", () ->
@@ -79,50 +124,29 @@ public class ModBlocks {
     public static final Supplier<Block> WAXED_RUSTED_CUT_IRON_SLAB = regWithItem("waxed_rusted_cut_iron_slab", () ->
             new SlabBlock(noTick(Blocks.IRON_BLOCK)));
 
-    //plate iron
 
-    public static final Supplier<Block> PLATE_IRON = regWithItem("plate_iron", () ->
-            new RustableBlock(Rustable.RustLevel.UNAFFECTED, BlockBehaviour.Properties.copy(Blocks.IRON_BLOCK)));
-    public static final Supplier<Block> WEATHERED_PLATE_IRON = regWithItem("weathered_plate_iron", () ->
-            new RustableBlock(Rustable.RustLevel.WEATHERED, BlockBehaviour.Properties.copy(Blocks.IRON_BLOCK)));
-    public static final Supplier<Block> RUSTED_PLATE_IRON = regWithItem("rusted_plate_iron", () ->
-            new RustableBlock(Rustable.RustLevel.RUSTED, BlockBehaviour.Properties.copy(Blocks.IRON_BLOCK)));
+    public static final Supplier<Block> IRON_SCAFFOLD = regWithItem("iron_scaffold", () ->
+            new RustableBlock(Rustable.RustLevel.UNAFFECTED, BlockBehaviour.Properties.copy(Blocks.GLASS).instrument(NoteBlockInstrument.IRON_XYLOPHONE).requiresCorrectToolForDrops().strength(5.0F, 6.0F).sound(SoundType.METAL)));
+    public static final Supplier<Block> WEATHERED_IRON_SCAFFOLD = regWithItem("weathered_iron_scaffold", () ->
+            new RustableBlock(Rustable.RustLevel.WEATHERED, BlockBehaviour.Properties.copy(Blocks.GLASS).instrument(NoteBlockInstrument.IRON_XYLOPHONE).requiresCorrectToolForDrops().strength(5.0F, 6.0F).sound(SoundType.METAL)));
+    public static final Supplier<Block> RUSTED_IRON_SCAFFOLD = regWithItem("rusted_iron_scaffold", () ->
+            new RustableBlock(Rustable.RustLevel.RUSTED, BlockBehaviour.Properties.copy(Blocks.GLASS).instrument(NoteBlockInstrument.IRON_XYLOPHONE).requiresCorrectToolForDrops().strength(5.0F, 6.0F).sound(SoundType.METAL)));
 
-    public static final Supplier<Block> PLATE_IRON_STAIRS = regWithItem("plate_iron_stairs", () ->
-            new RustableStairsBlock(Rustable.RustLevel.UNAFFECTED, CUT_IRON, BlockBehaviour.Properties.copy(Blocks.IRON_BLOCK)));
-    public static final Supplier<Block> WEATHERED_PLATE_IRON_STAIRS = regWithItem("weathered_plate_iron_stairs", () ->
-            new RustableStairsBlock(Rustable.RustLevel.WEATHERED, CUT_IRON, BlockBehaviour.Properties.copy(Blocks.IRON_BLOCK)));
-    public static final Supplier<Block> RUSTED_PLATE_IRON_STAIRS = regWithItem("rusted_plate_iron_stairs", () ->
-            new RustableStairsBlock(Rustable.RustLevel.RUSTED, CUT_IRON, BlockBehaviour.Properties.copy(Blocks.IRON_BLOCK)));
+    public static final Supplier<Block> IRON_SCAFFOLD_STAIRS = regWithItem("iron_scaffold_stairs", () ->
+            new RustableStairsBlock(Rustable.RustLevel.UNAFFECTED, IRON_SCAFFOLD, BlockBehaviour.Properties.copy(Blocks.GLASS).instrument(NoteBlockInstrument.IRON_XYLOPHONE).requiresCorrectToolForDrops().strength(5.0F, 6.0F).sound(SoundType.METAL)));
+    public static final Supplier<Block> WEATHERED_IRON_SCAFFOLD_STAIRS = regWithItem("weathered_iron_scaffold_stairs", () ->
+            new RustableStairsBlock(Rustable.RustLevel.WEATHERED, IRON_SCAFFOLD, BlockBehaviour.Properties.copy(Blocks.GLASS).instrument(NoteBlockInstrument.IRON_XYLOPHONE).requiresCorrectToolForDrops().strength(5.0F, 6.0F).sound(SoundType.METAL)));
+    public static final Supplier<Block> RUSTED_IRON_SCAFFOLD_STAIRS = regWithItem("rusted_iron_scaffold_stairs", () ->
+            new RustableStairsBlock(Rustable.RustLevel.RUSTED, IRON_SCAFFOLD, BlockBehaviour.Properties.copy(Blocks.GLASS).instrument(NoteBlockInstrument.IRON_XYLOPHONE).requiresCorrectToolForDrops().strength(5.0F, 6.0F).sound(SoundType.METAL)));
 
-    public static final Supplier<Block> PLATE_IRON_SLAB = regWithItem("plate_iron_slab", () ->
-            new RustableSlabBlock(Rustable.RustLevel.UNAFFECTED, BlockBehaviour.Properties.copy(Blocks.IRON_BLOCK)));
-    public static final Supplier<Block> WEATHERED_PLATE_IRON_SLAB = regWithItem("weathered_plate_iron_slab", () ->
-            new RustableSlabBlock(Rustable.RustLevel.WEATHERED, BlockBehaviour.Properties.copy(Blocks.IRON_BLOCK)));
-    public static final Supplier<Block> RUSTED_PLATE_IRON_SLAB = regWithItem("rusted_plate_iron_slab", () ->
-            new RustableSlabBlock(Rustable.RustLevel.RUSTED, BlockBehaviour.Properties.copy(Blocks.IRON_BLOCK)));
+    public static final Supplier<Block> IRON_SCAFFOLD_SLAB = regWithItem("iron_scaffold_slab", () ->
+            new RustableSlabBlock(Rustable.RustLevel.UNAFFECTED, BlockBehaviour.Properties.copy(Blocks.GLASS).instrument(NoteBlockInstrument.IRON_XYLOPHONE).requiresCorrectToolForDrops().strength(5.0F, 6.0F).sound(SoundType.METAL)));
+    public static final Supplier<Block> WEATHERED_IRON_SCAFFOLD_SLAB = regWithItem("weathered_iron_scaffold_slab", () ->
+            new RustableSlabBlock(Rustable.RustLevel.WEATHERED, BlockBehaviour.Properties.copy(Blocks.GLASS).instrument(NoteBlockInstrument.IRON_XYLOPHONE).requiresCorrectToolForDrops().strength(5.0F, 6.0F).sound(SoundType.METAL)));
+    public static final Supplier<Block> RUSTED_IRON_SCAFFOLD_SLAB = regWithItem("rusted_iron_scaffold_slab", () ->
+            new RustableSlabBlock(Rustable.RustLevel.RUSTED, BlockBehaviour.Properties.copy(Blocks.GLASS).instrument(NoteBlockInstrument.IRON_XYLOPHONE).requiresCorrectToolForDrops().strength(5.0F, 6.0F).sound(SoundType.METAL)));
 
-    //waxed
-    public static final Supplier<Block> WAXED_PLATE_IRON = regWithItem("waxed_plate_iron", () ->
-            new Block(noTick(Blocks.IRON_BLOCK)));
-    public static final Supplier<Block> WAXED_WEATHERED_PLATE_IRON = regWithItem("waxed_weathered_plate_iron", () ->
-            new Block(noTick(Blocks.IRON_BLOCK)));
-    public static final Supplier<Block> WAXED_RUSTED_PLATE_IRON = regWithItem("waxed_rusted_plate_iron", () ->
-            new Block(noTick(Blocks.IRON_BLOCK)));
 
-    public static final Supplier<Block> WAXED_PLATE_IRON_STAIRS = regWithItem("waxed_plate_iron_stairs", () ->
-            new ModStairBlock(WAXED_PLATE_IRON, noTick(Blocks.IRON_BLOCK)));
-    public static final Supplier<Block> WAXED_WEATHERED_PLATE_IRON_STAIRS = regWithItem("waxed_weathered_plate_iron_stairs", () ->
-            new ModStairBlock(WAXED_WEATHERED_PLATE_IRON, noTick(Blocks.IRON_BLOCK)));
-    public static final Supplier<Block> WAXED_RUSTED_PLATE_IRON_STAIRS = regWithItem("waxed_rusted_plate_iron_stairs", () ->
-            new ModStairBlock(WAXED_RUSTED_PLATE_IRON, noTick(Blocks.IRON_BLOCK)));
-
-    public static final Supplier<Block> WAXED_PLATE_IRON_SLAB = regWithItem("waxed_plate_iron_slab", () ->
-            new SlabBlock(noTick(Blocks.IRON_BLOCK)));
-    public static final Supplier<Block> WAXED_WEATHERED_PLATE_IRON_SLAB = regWithItem("waxed_weathered_plate_iron_slab", () ->
-            new SlabBlock(noTick(Blocks.IRON_BLOCK)));
-    public static final Supplier<Block> WAXED_RUSTED_PLATE_IRON_SLAB = regWithItem("waxed_rusted_plate_iron_slab", () ->
-            new SlabBlock(noTick(Blocks.IRON_BLOCK)));
 
     //iron decor
 

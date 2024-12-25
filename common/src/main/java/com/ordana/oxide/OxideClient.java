@@ -22,6 +22,10 @@ public class OxideClient {
 
 
     public static void setup() {
+        ClientHelper.registerRenderType(ModBlocks.IRON_SCAFFOLD.get(), RenderType.cutout());
+        ClientHelper.registerRenderType(ModBlocks.WEATHERED_IRON_SCAFFOLD.get(), RenderType.cutout());
+        ClientHelper.registerRenderType(ModBlocks.RUSTED_IRON_SCAFFOLD.get(), RenderType.cutout());
+
         ClientHelper.registerRenderType(ModBlocks.WEATHERED_IRON_DOOR.get(), RenderType.cutout());
         ClientHelper.registerRenderType(ModBlocks.RUSTED_IRON_DOOR.get(), RenderType.cutout());
 

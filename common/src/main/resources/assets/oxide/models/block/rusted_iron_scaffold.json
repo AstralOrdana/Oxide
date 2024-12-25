@@ -1,42 +1,7 @@
 {
-	"credit": "Made with Blockbench",
+	"parent": "oxide:block/scaffold",
 	"textures": {
-		"0": "oxide:block/rusted_iron_scaffold/side",
-		"6": "oxide:block/rusted_iron_scaffold/top",
-		"15": "oxide:block/rusted_iron_scaffold/side_top",
-		"particle": "oxide:block/rusted_iron_scaffold/side"
-	},
-	"elements": [
-		{
-			"from": [0, 0, 0],
-			"to": [16, 16, 16],
-			"faces": {
-				"north": {"uv": [0, 0, 16, 16], "texture": "#15"},
-				"east": {"uv": [0, 0, 16, 16], "texture": "#15"},
-				"south": {"uv": [0, 0, 16, 16], "texture": "#15"},
-				"west": {"uv": [0, 0, 16, 16], "texture": "#15"},
-				"up": {"uv": [0, 0, 16, 16], "texture": "#6"},
-				"down": {"uv": [0, 0, 16, 16], "texture": "#0"}
-			}
-		},
-		{
-			"from": [16, 16, 16],
-			"to": [0, 0, 0],
-			"faces": {
-				"north": {"uv": [0, 16, 16, 0], "texture": "#0"},
-				"east": {"uv": [0, 16, 16, 0], "texture": "#0"},
-				"south": {"uv": [0, 16, 16, 0], "texture": "#0"},
-				"west": {"uv": [0, 16, 16, 0], "texture": "#0"},
-				"down": {"uv": [0, 0, 16, 16], "texture": "#6"}
-			}
-		}
-	],
-	"groups": [
-		{
-			"name": "block",
-			"origin": [0, 0, 0],
-			"color": 0,
-			"children": [0, 1]
-		}
-	]
+		"scaffold": "oxide:block/rusted_iron_scaffold/side",
+		"top": "oxide:block/rusted_iron_scaffold/top"
+	}
 }
