@@ -29,7 +29,7 @@ public class OxideClient {
         ClientHelper.registerRenderType(ModBlocks.IRON_SCAFFOLD_STAIRS.get(), RenderType.cutout());
         ClientHelper.registerRenderType(ModBlocks.WEATHERED_IRON_SCAFFOLD_STAIRS.get(), RenderType.cutout());
         ClientHelper.registerRenderType(ModBlocks.RUSTED_IRON_SCAFFOLD_STAIRS.get(), RenderType.cutout());
-        
+
         ClientHelper.registerRenderType(ModBlocks.IRON_SCAFFOLD_SLAB.get(), RenderType.cutout());
         ClientHelper.registerRenderType(ModBlocks.WEATHERED_IRON_SCAFFOLD_SLAB.get(), RenderType.cutout());
         ClientHelper.registerRenderType(ModBlocks.RUSTED_IRON_SCAFFOLD_SLAB.get(), RenderType.cutout());
