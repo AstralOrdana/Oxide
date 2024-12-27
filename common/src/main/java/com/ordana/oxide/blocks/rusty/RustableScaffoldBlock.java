@@ -1,5 +1,6 @@
 package com.ordana.oxide.blocks.rusty;
 
+import com.ordana.oxide.reg.ModTags;
 import net.minecraft.core.BlockPos;
 import net.minecraft.core.Direction;
 import net.minecraft.server.level.ServerLevel;
@@ -12,11 +13,11 @@ import net.minecraft.world.phys.shapes.CollisionContext;
 import net.minecraft.world.phys.shapes.Shapes;
 import net.minecraft.world.phys.shapes.VoxelShape;
 
-public class RustableScaffoldingBlock extends Block implements Rustable {
+public class RustableScaffoldBlock extends Block implements Rustable {
 
     private final Rustable.RustLevel rustLevel;
 
-    public RustableScaffoldingBlock(Rustable.RustLevel rustLevel, BlockBehaviour.Properties settings) {
+    public RustableScaffoldBlock(Rustable.RustLevel rustLevel, BlockBehaviour.Properties settings) {
         super(Rustable.setRandomTicking(settings, rustLevel));
         this.rustLevel = rustLevel;
     }
@@ -32,7 +33,6 @@ public class RustableScaffoldingBlock extends Block implements Rustable {
     }
 
 
-
     public VoxelShape getVisualShape(BlockState state, BlockGetter level, BlockPos pos, CollisionContext context) {
         return Shapes.empty();
     }
@@ -46,6 +46,6 @@ public class RustableScaffoldingBlock extends Block implements Rustable {
     }
 
     public boolean skipRendering(BlockState state, BlockState adjacentState, Direction direction) {
-        return adjacentState.is(this) ? true : super.skipRendering(state, adjacentState, direction);
+        return adjacentState.is(ModTags.SCAFFOLDS) || super.skipRendering(state, adjacentState, direction);
     }
 }

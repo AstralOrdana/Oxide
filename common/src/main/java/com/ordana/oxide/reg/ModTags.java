@@ -12,6 +12,7 @@ public class ModTags {
     public static final TagKey<Block> RUSTED_IRON = registerBlockTag("rusted_iron");
     public static final TagKey<Block> RUSTABLE = registerBlockTag("rustable");
     public static final TagKey<Block> WAXED_BLOCKS = registerBlockTag("waxed_blocks");
+    public static final TagKey<Block> SCAFFOLDS = registerBlockTag("scaffolds");
 
     public static final TagKey<Block> BARS = registerBlockTag("bars");
 
