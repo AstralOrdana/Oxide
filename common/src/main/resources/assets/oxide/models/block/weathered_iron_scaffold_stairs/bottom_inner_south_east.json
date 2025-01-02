@@ -1,0 +1,11 @@
+{
+  "parent": "oxide:block/fancy_inner_stairs",
+  "textures": {
+    "bottom": "oxide:block/weathered_iron_scaffold/side",
+    "top": "oxide:block/weathered_iron_scaffold_stairs/top/lnw",
+    "north": "oxide:block/weathered_iron_scaffold_stairs/lne",
+	"south": "oxide:block/weathered_iron_scaffold/side_top",
+	"west": "oxide:block/weathered_iron_scaffold_stairs/lnw",
+	"east": "oxide:block/weathered_iron_scaffold/side_top"
+  }
+}
