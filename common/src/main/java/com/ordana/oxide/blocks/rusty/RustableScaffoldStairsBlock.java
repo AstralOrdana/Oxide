@@ -1,5 +1,6 @@
 package com.ordana.oxide.blocks.rusty;
 
+import com.ordana.oxide.reg.ModTags;
 import net.mehvahdjukaar.moonlight.api.block.ModStairBlock;
 import net.minecraft.core.BlockPos;
 import net.minecraft.core.Direction;
@@ -47,6 +48,6 @@ public class RustableScaffoldStairsBlock extends ModStairBlock implements Rustab
     }
 
     public boolean skipRendering(BlockState state, BlockState adjacentState, Direction direction) {
-        return adjacentState.is(this) ? true : super.skipRendering(state, adjacentState, direction);
+        return (adjacentState.is(ModTags.SCAFFOLDS) && direction == Direction.UP) || super.skipRendering(state, adjacentState, direction);
     }
 }

@@ -1,5 +1,6 @@
 package com.ordana.oxide.blocks.rusty;
 
+import com.ordana.oxide.reg.ModTags;
 import net.minecraft.core.BlockPos;
 import net.minecraft.core.Direction;
 import net.minecraft.server.level.ServerLevel;
@@ -44,6 +45,6 @@ public class RustableScaffoldSlabBlock extends SlabBlock implements Rustable {
     }
 
     public boolean skipRendering(BlockState state, BlockState adjacentState, Direction direction) {
-        return adjacentState.is(this) || super.skipRendering(state, adjacentState, direction);
+        return (adjacentState.is(ModTags.SCAFFOLDS) && direction == Direction.UP) || super.skipRendering(state, adjacentState, direction);
     }
 }

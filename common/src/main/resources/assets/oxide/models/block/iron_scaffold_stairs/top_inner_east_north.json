@@ -1,8 +1,9 @@
 {
   "parent": "oxide:block/fancy_inner_stairs",
   "textures": {
-    "bottom": "oxide:block/iron_scaffold/side",
-    "top": "oxide:block/iron_scaffold_stairs/top/lnw",
+    "default": "oxide:block/iron_scaffold_stairs/default",
+    "top": "oxide:block/iron_scaffold_stairs/lnw",
+    "bottom": "oxide:block/iron_scaffold_stairs/top/block",
     "north": "oxide:block/iron_scaffold_stairs/lsw",
 	"south": "oxide:block/iron_scaffold/side_top",
 	"west": "oxide:block/iron_scaffold_stairs/lse",
