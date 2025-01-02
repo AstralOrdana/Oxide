@@ -48,6 +48,6 @@ public class RustableScaffoldStairsBlock extends ModStairBlock implements Rustab
     }
 
     public boolean skipRendering(BlockState state, BlockState adjacentState, Direction direction) {
-        return (adjacentState.is(ModTags.SCAFFOLDS) && direction == Direction.UP) || super.skipRendering(state, adjacentState, direction);
+        return (adjacentState.is(ModTags.SCAFFOLDS) && direction.getAxis() == Direction.Axis.Y) || super.skipRendering(state, adjacentState, direction);
     }
 }
