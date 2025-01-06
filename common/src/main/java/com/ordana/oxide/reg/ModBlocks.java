@@ -144,7 +144,7 @@ public class ModBlocks {
     public static final Supplier<Block> RUSTED_IRON_SCAFFOLD_SLAB = regWithItem("rusted_iron_scaffold_slab", () ->
             new RustableScaffoldSlabBlock(Rustable.RustLevel.RUSTED, BlockBehaviour.Properties.copy(Blocks.GLASS).instrument(NoteBlockInstrument.IRON_XYLOPHONE).requiresCorrectToolForDrops().strength(5.0F, 6.0F).sound(SoundType.METAL)));
 
-    //corrugated metal
+    //corrugated iron
     public static final Supplier<Block> WHITE_CORRUGATED_IRON = regWithItem("white_corrugated_iron", () ->
             new RustableBlock(Rustable.RustLevel.UNAFFECTED, BlockBehaviour.Properties.copy(Blocks.IRON_BLOCK)));
     public static final Supplier<Block> LIGHT_GRAY_CORRUGATED_IRON = regWithItem("light_gray_corrugated_iron", () ->
@@ -213,6 +213,150 @@ public class ModBlocks {
 
     public static final Supplier<Block> RUSTED_CORRUGATED_IRON = regWithItem("rusted_corrugated_iron", () ->
             new RustableBlock(Rustable.RustLevel.RUSTED, BlockBehaviour.Properties.copy(Blocks.IRON_BLOCK)));
+
+
+
+    public static final Supplier<Block> WHITE_CORRUGATED_IRON_STAIRS = regWithItem("white_corrugated_iron_stairs", () ->
+            new RustableStairsBlock(Rustable.RustLevel.UNAFFECTED, WHITE_CORRUGATED_IRON, BlockBehaviour.Properties.copy(Blocks.IRON_BLOCK)));
+    public static final Supplier<Block> LIGHT_GRAY_CORRUGATED_IRON_STAIRS = regWithItem("light_gray_corrugated_iron_stairs", () ->
+            new RustableStairsBlock(Rustable.RustLevel.UNAFFECTED, WHITE_CORRUGATED_IRON, BlockBehaviour.Properties.copy(Blocks.IRON_BLOCK)));
+    public static final Supplier<Block> GRAY_CORRUGATED_IRON_STAIRS = regWithItem("gray_corrugated_iron_stairs", () ->
+            new RustableStairsBlock(Rustable.RustLevel.UNAFFECTED, WHITE_CORRUGATED_IRON, BlockBehaviour.Properties.copy(Blocks.IRON_BLOCK)));
+    public static final Supplier<Block> BLACK_CORRUGATED_IRON_STAIRS = regWithItem("black_corrugated_iron_stairs", () ->
+            new RustableStairsBlock(Rustable.RustLevel.UNAFFECTED, WHITE_CORRUGATED_IRON, BlockBehaviour.Properties.copy(Blocks.IRON_BLOCK)));
+    public static final Supplier<Block> BROWN_CORRUGATED_IRON_STAIRS = regWithItem("brown_corrugated_iron_stairs", () ->
+            new RustableStairsBlock(Rustable.RustLevel.UNAFFECTED, WHITE_CORRUGATED_IRON, BlockBehaviour.Properties.copy(Blocks.IRON_BLOCK)));
+    public static final Supplier<Block> RED_CORRUGATED_IRON_STAIRS = regWithItem("red_corrugated_iron_stairs", () ->
+            new RustableStairsBlock(Rustable.RustLevel.UNAFFECTED, WHITE_CORRUGATED_IRON, BlockBehaviour.Properties.copy(Blocks.IRON_BLOCK)));
+    public static final Supplier<Block> ORANGE_CORRUGATED_IRON_STAIRS = regWithItem("orange_corrugated_iron_stairs", () ->
+            new RustableStairsBlock(Rustable.RustLevel.UNAFFECTED, WHITE_CORRUGATED_IRON, BlockBehaviour.Properties.copy(Blocks.IRON_BLOCK)));
+    public static final Supplier<Block> YELLOW_CORRUGATED_IRON_STAIRS = regWithItem("yellow_corrugated_iron_stairs", () ->
+            new RustableStairsBlock(Rustable.RustLevel.UNAFFECTED, WHITE_CORRUGATED_IRON, BlockBehaviour.Properties.copy(Blocks.IRON_BLOCK)));
+    public static final Supplier<Block> LIME_CORRUGATED_IRON_STAIRS = regWithItem("lime_corrugated_iron_stairs", () ->
+            new RustableStairsBlock(Rustable.RustLevel.UNAFFECTED, WHITE_CORRUGATED_IRON, BlockBehaviour.Properties.copy(Blocks.IRON_BLOCK)));
+    public static final Supplier<Block> GREEN_CORRUGATED_IRON_STAIRS = regWithItem("green_corrugated_iron_stairs", () ->
+            new RustableStairsBlock(Rustable.RustLevel.UNAFFECTED, WHITE_CORRUGATED_IRON, BlockBehaviour.Properties.copy(Blocks.IRON_BLOCK)));
+    public static final Supplier<Block> BLUE_CORRUGATED_IRON_STAIRS = regWithItem("blue_corrugated_iron_stairs", () ->
+            new RustableStairsBlock(Rustable.RustLevel.UNAFFECTED, WHITE_CORRUGATED_IRON, BlockBehaviour.Properties.copy(Blocks.IRON_BLOCK)));
+    public static final Supplier<Block> PURPLE_CORRUGATED_IRON_STAIRS = regWithItem("purple_corrugated_iron_stairs", () ->
+            new RustableStairsBlock(Rustable.RustLevel.UNAFFECTED, WHITE_CORRUGATED_IRON, BlockBehaviour.Properties.copy(Blocks.IRON_BLOCK)));
+    public static final Supplier<Block> MAGENTA_CORRUGATED_IRON_STAIRS = regWithItem("magenta_corrugated_iron_stairs", () ->
+            new RustableStairsBlock(Rustable.RustLevel.UNAFFECTED, WHITE_CORRUGATED_IRON, BlockBehaviour.Properties.copy(Blocks.IRON_BLOCK)));
+    public static final Supplier<Block> PINK_CORRUGATED_IRON_STAIRS = regWithItem("pink_corrugated_iron_stairs", () ->
+            new RustableStairsBlock(Rustable.RustLevel.UNAFFECTED, WHITE_CORRUGATED_IRON, BlockBehaviour.Properties.copy(Blocks.IRON_BLOCK)));
+    public static final Supplier<Block> LIGHT_BLUE_CORRUGATED_IRON_STAIRS = regWithItem("light_blue_corrugated_iron_stairs", () ->
+            new RustableStairsBlock(Rustable.RustLevel.UNAFFECTED, WHITE_CORRUGATED_IRON, BlockBehaviour.Properties.copy(Blocks.IRON_BLOCK)));
+    public static final Supplier<Block> CYAN_CORRUGATED_IRON_STAIRS = regWithItem("cyan_corrugated_iron_stairs", () ->
+            new RustableStairsBlock(Rustable.RustLevel.UNAFFECTED, WHITE_CORRUGATED_IRON, BlockBehaviour.Properties.copy(Blocks.IRON_BLOCK)));
+
+    public static final Supplier<Block> WEATHERED_WHITE_CORRUGATED_IRON_STAIRS = regWithItem("weathered_white_corrugated_iron_stairs", () ->
+            new RustableStairsBlock(Rustable.RustLevel.WEATHERED, WHITE_CORRUGATED_IRON, BlockBehaviour.Properties.copy(Blocks.IRON_BLOCK)));
+    public static final Supplier<Block> WEATHERED_LIGHT_GRAY_CORRUGATED_IRON_STAIRS = regWithItem("weathered_light_gray_corrugated_iron_stairs", () ->
+            new RustableStairsBlock(Rustable.RustLevel.WEATHERED, WHITE_CORRUGATED_IRON, BlockBehaviour.Properties.copy(Blocks.IRON_BLOCK)));
+    public static final Supplier<Block> WEATHERED_GRAY_CORRUGATED_IRON_STAIRS = regWithItem("weathered_gray_corrugated_iron_stairs", () ->
+            new RustableStairsBlock(Rustable.RustLevel.WEATHERED, WHITE_CORRUGATED_IRON, BlockBehaviour.Properties.copy(Blocks.IRON_BLOCK)));
+    public static final Supplier<Block> WEATHERED_BLACK_CORRUGATED_IRON_STAIRS = regWithItem("weathered_black_corrugated_iron_stairs", () ->
+            new RustableStairsBlock(Rustable.RustLevel.WEATHERED, WHITE_CORRUGATED_IRON, BlockBehaviour.Properties.copy(Blocks.IRON_BLOCK)));
+    public static final Supplier<Block> WEATHERED_BROWN_CORRUGATED_IRON_STAIRS = regWithItem("weathered_brown_corrugated_iron_stairs", () ->
+            new RustableStairsBlock(Rustable.RustLevel.WEATHERED, WHITE_CORRUGATED_IRON, BlockBehaviour.Properties.copy(Blocks.IRON_BLOCK)));
+    public static final Supplier<Block> WEATHERED_RED_CORRUGATED_IRON_STAIRS = regWithItem("weathered_red_corrugated_iron_stairs", () ->
+            new RustableStairsBlock(Rustable.RustLevel.WEATHERED, WHITE_CORRUGATED_IRON, BlockBehaviour.Properties.copy(Blocks.IRON_BLOCK)));
+    public static final Supplier<Block> WEATHERED_ORANGE_CORRUGATED_IRON_STAIRS = regWithItem("weathered_orange_corrugated_iron_stairs", () ->
+            new RustableStairsBlock(Rustable.RustLevel.WEATHERED, WHITE_CORRUGATED_IRON, BlockBehaviour.Properties.copy(Blocks.IRON_BLOCK)));
+    public static final Supplier<Block> WEATHERED_YELLOW_CORRUGATED_IRON_STAIRS = regWithItem("weathered_yellow_corrugated_iron_stairs", () ->
+            new RustableStairsBlock(Rustable.RustLevel.WEATHERED, WHITE_CORRUGATED_IRON, BlockBehaviour.Properties.copy(Blocks.IRON_BLOCK)));
+    public static final Supplier<Block> WEATHERED_LIME_CORRUGATED_IRON_STAIRS = regWithItem("weathered_lime_corrugated_iron_stairs", () ->
+            new RustableStairsBlock(Rustable.RustLevel.WEATHERED, WHITE_CORRUGATED_IRON, BlockBehaviour.Properties.copy(Blocks.IRON_BLOCK)));
+    public static final Supplier<Block> WEATHERED_GREEN_CORRUGATED_IRON_STAIRS = regWithItem("weathered_green_corrugated_iron_stairs", () ->
+            new RustableStairsBlock(Rustable.RustLevel.WEATHERED, WHITE_CORRUGATED_IRON, BlockBehaviour.Properties.copy(Blocks.IRON_BLOCK)));
+    public static final Supplier<Block> WEATHERED_BLUE_CORRUGATED_IRON_STAIRS = regWithItem("weathered_blue_corrugated_iron_stairs", () ->
+            new RustableStairsBlock(Rustable.RustLevel.WEATHERED, WHITE_CORRUGATED_IRON, BlockBehaviour.Properties.copy(Blocks.IRON_BLOCK)));
+    public static final Supplier<Block> WEATHERED_PURPLE_CORRUGATED_IRON_STAIRS = regWithItem("weathered_purple_corrugated_iron_stairs", () ->
+            new RustableStairsBlock(Rustable.RustLevel.WEATHERED, WHITE_CORRUGATED_IRON, BlockBehaviour.Properties.copy(Blocks.IRON_BLOCK)));
+    public static final Supplier<Block> WEATHERED_MAGENTA_CORRUGATED_IRON_STAIRS = regWithItem("weathered_magenta_corrugated_iron_stairs", () ->
+            new RustableStairsBlock(Rustable.RustLevel.WEATHERED, WHITE_CORRUGATED_IRON, BlockBehaviour.Properties.copy(Blocks.IRON_BLOCK)));
+    public static final Supplier<Block> WEATHERED_PINK_CORRUGATED_IRON_STAIRS = regWithItem("weathered_pink_corrugated_iron_stairs", () ->
+            new RustableStairsBlock(Rustable.RustLevel.WEATHERED, WHITE_CORRUGATED_IRON, BlockBehaviour.Properties.copy(Blocks.IRON_BLOCK)));
+    public static final Supplier<Block> WEATHERED_LIGHT_BLUE_CORRUGATED_IRON_STAIRS = regWithItem("weathered_light_blue_corrugated_iron_stairs", () ->
+            new RustableStairsBlock(Rustable.RustLevel.WEATHERED, WHITE_CORRUGATED_IRON, BlockBehaviour.Properties.copy(Blocks.IRON_BLOCK)));
+    public static final Supplier<Block> WEATHERED_CYAN_CORRUGATED_IRON_STAIRS = regWithItem("weathered_cyan_corrugated_iron_stairs", () ->
+            new RustableStairsBlock(Rustable.RustLevel.WEATHERED, WHITE_CORRUGATED_IRON, BlockBehaviour.Properties.copy(Blocks.IRON_BLOCK)));
+
+    public static final Supplier<Block> RUSTED_CORRUGATED_IRON_STAIRS = regWithItem("rusted_corrugated_iron_stairs", () ->
+            new RustableStairsBlock(Rustable.RustLevel.RUSTED, WHITE_CORRUGATED_IRON, BlockBehaviour.Properties.copy(Blocks.IRON_BLOCK)));
+
+
+
+    public static final Supplier<Block> WHITE_CORRUGATED_IRON_SLAB = regWithItem("white_corrugated_iron_slab", () ->
+            new RustableSlabBlock(Rustable.RustLevel.UNAFFECTED,BlockBehaviour.Properties.copy(Blocks.IRON_BLOCK)));
+    public static final Supplier<Block> LIGHT_GRAY_CORRUGATED_IRON_SLAB = regWithItem("light_gray_corrugated_iron_slab", () ->
+            new RustableSlabBlock(Rustable.RustLevel.UNAFFECTED,BlockBehaviour.Properties.copy(Blocks.IRON_BLOCK)));
+    public static final Supplier<Block> GRAY_CORRUGATED_IRON_SLAB = regWithItem("gray_corrugated_iron_slab", () ->
+            new RustableSlabBlock(Rustable.RustLevel.UNAFFECTED,BlockBehaviour.Properties.copy(Blocks.IRON_BLOCK)));
+    public static final Supplier<Block> BLACK_CORRUGATED_IRON_SLAB = regWithItem("black_corrugated_iron_slab", () ->
+            new RustableSlabBlock(Rustable.RustLevel.UNAFFECTED,BlockBehaviour.Properties.copy(Blocks.IRON_BLOCK)));
+    public static final Supplier<Block> BROWN_CORRUGATED_IRON_SLAB = regWithItem("brown_corrugated_iron_slab", () ->
+            new RustableSlabBlock(Rustable.RustLevel.UNAFFECTED,BlockBehaviour.Properties.copy(Blocks.IRON_BLOCK)));
+    public static final Supplier<Block> RED_CORRUGATED_IRON_SLAB = regWithItem("red_corrugated_iron_slab", () ->
+            new RustableSlabBlock(Rustable.RustLevel.UNAFFECTED,BlockBehaviour.Properties.copy(Blocks.IRON_BLOCK)));
+    public static final Supplier<Block> ORANGE_CORRUGATED_IRON_SLAB = regWithItem("orange_corrugated_iron_slab", () ->
+            new RustableSlabBlock(Rustable.RustLevel.UNAFFECTED,BlockBehaviour.Properties.copy(Blocks.IRON_BLOCK)));
+    public static final Supplier<Block> YELLOW_CORRUGATED_IRON_SLAB = regWithItem("yellow_corrugated_iron_slab", () ->
+            new RustableSlabBlock(Rustable.RustLevel.UNAFFECTED,BlockBehaviour.Properties.copy(Blocks.IRON_BLOCK)));
+    public static final Supplier<Block> LIME_CORRUGATED_IRON_SLAB = regWithItem("lime_corrugated_iron_slab", () ->
+            new RustableSlabBlock(Rustable.RustLevel.UNAFFECTED,BlockBehaviour.Properties.copy(Blocks.IRON_BLOCK)));
+    public static final Supplier<Block> GREEN_CORRUGATED_IRON_SLAB = regWithItem("green_corrugated_iron_slab", () ->
+            new RustableSlabBlock(Rustable.RustLevel.UNAFFECTED,BlockBehaviour.Properties.copy(Blocks.IRON_BLOCK)));
+    public static final Supplier<Block> BLUE_CORRUGATED_IRON_SLAB = regWithItem("blue_corrugated_iron_slab", () ->
+            new RustableSlabBlock(Rustable.RustLevel.UNAFFECTED,BlockBehaviour.Properties.copy(Blocks.IRON_BLOCK)));
+    public static final Supplier<Block> PURPLE_CORRUGATED_IRON_SLAB = regWithItem("purple_corrugated_iron_slab", () ->
+            new RustableSlabBlock(Rustable.RustLevel.UNAFFECTED,BlockBehaviour.Properties.copy(Blocks.IRON_BLOCK)));
+    public static final Supplier<Block> MAGENTA_CORRUGATED_IRON_SLAB = regWithItem("magenta_corrugated_iron_slab", () ->
+            new RustableSlabBlock(Rustable.RustLevel.UNAFFECTED,BlockBehaviour.Properties.copy(Blocks.IRON_BLOCK)));
+    public static final Supplier<Block> PINK_CORRUGATED_IRON_SLAB = regWithItem("pink_corrugated_iron_slab", () ->
+            new RustableSlabBlock(Rustable.RustLevel.UNAFFECTED,BlockBehaviour.Properties.copy(Blocks.IRON_BLOCK)));
+    public static final Supplier<Block> LIGHT_BLUE_CORRUGATED_IRON_SLAB = regWithItem("light_blue_corrugated_iron_slab", () ->
+            new RustableSlabBlock(Rustable.RustLevel.UNAFFECTED,BlockBehaviour.Properties.copy(Blocks.IRON_BLOCK)));
+    public static final Supplier<Block> CYAN_CORRUGATED_IRON_SLAB = regWithItem("cyan_corrugated_iron_slab", () ->
+            new RustableSlabBlock(Rustable.RustLevel.UNAFFECTED,BlockBehaviour.Properties.copy(Blocks.IRON_BLOCK)));
+
+    public static final Supplier<Block> WEATHERED_WHITE_CORRUGATED_IRON_SLAB = regWithItem("weathered_white_corrugated_iron_slab", () ->
+            new RustableSlabBlock(Rustable.RustLevel.WEATHERED,BlockBehaviour.Properties.copy(Blocks.IRON_BLOCK)));
+    public static final Supplier<Block> WEATHERED_LIGHT_GRAY_CORRUGATED_IRON_SLAB = regWithItem("weathered_light_gray_corrugated_iron_slab", () ->
+            new RustableSlabBlock(Rustable.RustLevel.WEATHERED,BlockBehaviour.Properties.copy(Blocks.IRON_BLOCK)));
+    public static final Supplier<Block> WEATHERED_GRAY_CORRUGATED_IRON_SLAB = regWithItem("weathered_gray_corrugated_iron_slab", () ->
+            new RustableSlabBlock(Rustable.RustLevel.WEATHERED,BlockBehaviour.Properties.copy(Blocks.IRON_BLOCK)));
+    public static final Supplier<Block> WEATHERED_BLACK_CORRUGATED_IRON_SLAB = regWithItem("weathered_black_corrugated_iron_slab", () ->
+            new RustableSlabBlock(Rustable.RustLevel.WEATHERED,BlockBehaviour.Properties.copy(Blocks.IRON_BLOCK)));
+    public static final Supplier<Block> WEATHERED_BROWN_CORRUGATED_IRON_SLAB = regWithItem("weathered_brown_corrugated_iron_slab", () ->
+            new RustableSlabBlock(Rustable.RustLevel.WEATHERED,BlockBehaviour.Properties.copy(Blocks.IRON_BLOCK)));
+    public static final Supplier<Block> WEATHERED_RED_CORRUGATED_IRON_SLAB = regWithItem("weathered_red_corrugated_iron_slab", () ->
+            new RustableSlabBlock(Rustable.RustLevel.WEATHERED,BlockBehaviour.Properties.copy(Blocks.IRON_BLOCK)));
+    public static final Supplier<Block> WEATHERED_ORANGE_CORRUGATED_IRON_SLAB = regWithItem("weathered_orange_corrugated_iron_slab", () ->
+            new RustableSlabBlock(Rustable.RustLevel.WEATHERED,BlockBehaviour.Properties.copy(Blocks.IRON_BLOCK)));
+    public static final Supplier<Block> WEATHERED_YELLOW_CORRUGATED_IRON_SLAB = regWithItem("weathered_yellow_corrugated_iron_slab", () ->
+            new RustableSlabBlock(Rustable.RustLevel.WEATHERED,BlockBehaviour.Properties.copy(Blocks.IRON_BLOCK)));
+    public static final Supplier<Block> WEATHERED_LIME_CORRUGATED_IRON_SLAB = regWithItem("weathered_lime_corrugated_iron_slab", () ->
+            new RustableSlabBlock(Rustable.RustLevel.WEATHERED,BlockBehaviour.Properties.copy(Blocks.IRON_BLOCK)));
+    public static final Supplier<Block> WEATHERED_GREEN_CORRUGATED_IRON_SLAB = regWithItem("weathered_green_corrugated_iron_slab", () ->
+            new RustableSlabBlock(Rustable.RustLevel.WEATHERED,BlockBehaviour.Properties.copy(Blocks.IRON_BLOCK)));
+    public static final Supplier<Block> WEATHERED_BLUE_CORRUGATED_IRON_SLAB = regWithItem("weathered_blue_corrugated_iron_slab", () ->
+            new RustableSlabBlock(Rustable.RustLevel.WEATHERED,BlockBehaviour.Properties.copy(Blocks.IRON_BLOCK)));
+    public static final Supplier<Block> WEATHERED_PURPLE_CORRUGATED_IRON_SLAB = regWithItem("weathered_purple_corrugated_iron_slab", () ->
+            new RustableSlabBlock(Rustable.RustLevel.WEATHERED,BlockBehaviour.Properties.copy(Blocks.IRON_BLOCK)));
+    public static final Supplier<Block> WEATHERED_MAGENTA_CORRUGATED_IRON_SLAB = regWithItem("weathered_magenta_corrugated_iron_slab", () ->
+            new RustableSlabBlock(Rustable.RustLevel.WEATHERED,BlockBehaviour.Properties.copy(Blocks.IRON_BLOCK)));
+    public static final Supplier<Block> WEATHERED_PINK_CORRUGATED_IRON_SLAB = regWithItem("weathered_pink_corrugated_iron_slab", () ->
+            new RustableSlabBlock(Rustable.RustLevel.WEATHERED,BlockBehaviour.Properties.copy(Blocks.IRON_BLOCK)));
+    public static final Supplier<Block> WEATHERED_LIGHT_BLUE_CORRUGATED_IRON_SLAB = regWithItem("weathered_light_blue_corrugated_iron_slab", () ->
+            new RustableSlabBlock(Rustable.RustLevel.WEATHERED,BlockBehaviour.Properties.copy(Blocks.IRON_BLOCK)));
+    public static final Supplier<Block> WEATHERED_CYAN_CORRUGATED_IRON_SLAB = regWithItem("weathered_cyan_corrugated_iron_slab", () ->
+            new RustableSlabBlock(Rustable.RustLevel.WEATHERED,BlockBehaviour.Properties.copy(Blocks.IRON_BLOCK)));
+
+    public static final Supplier<Block> RUSTED_CORRUGATED_IRON_SLAB = regWithItem("rusted_corrugated_iron_slab", () ->
+            new RustableSlabBlock(Rustable.RustLevel.RUSTED,BlockBehaviour.Properties.copy(Blocks.IRON_BLOCK)));
+    
+    
 
     //iron decor
 

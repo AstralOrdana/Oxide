@@ -1,0 +1,13 @@
+{
+  "variants": {
+    "type=bottom": {
+      "model": "oxide:block/corrugated_iron_slab/white"
+    },
+    "type=double": {
+      "model": "oxide:block/corrugated_iron/white"
+    },
+    "type=top": {
+      "model": "oxide:block/corrugated_iron_slab/white_top"
+    }
+  }
+}

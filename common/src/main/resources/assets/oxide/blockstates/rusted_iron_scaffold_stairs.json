@@ -21,13 +21,11 @@
     },
     "facing=east,half=top,shape=inner_left": {
       "model": "oxide:block/rusted_iron_scaffold_stairs/top_inner_east_north",
-      "x": 180,
+      "y": 270,
       "uvlock": true
     },
     "facing=east,half=top,shape=inner_right": {
       "model": "oxide:block/rusted_iron_scaffold_stairs/top_inner_south_east",
-      "x": 180,
-      "y": 90,
       "uvlock": true
     },
     "facing=east,half=top,shape=outer_left": {
@@ -43,7 +41,6 @@
     },
     "facing=east,half=top,shape=straight": {
       "model": "oxide:block/rusted_iron_scaffold_stairs/top_base_eastwest",
-      "x": 180,
       "uvlock": true
     },
     "facing=north,half=bottom,shape=inner_left": {
@@ -73,13 +70,12 @@
     },
     "facing=north,half=top,shape=inner_left": {
       "model": "oxide:block/rusted_iron_scaffold_stairs/top_inner_north_west",
-      "x": 180,
-      "y": 270,
+      "y": 180,
       "uvlock": true
     },
     "facing=north,half=top,shape=inner_right": {
       "model": "oxide:block/rusted_iron_scaffold_stairs/top_inner_east_north",
-      "x": 180,
+      "y": 270,
       "uvlock": true
     },
     "facing=north,half=top,shape=outer_left": {
@@ -95,7 +91,6 @@
     },
     "facing=north,half=top,shape=straight": {
       "model": "oxide:block/rusted_iron_scaffold_stairs/top_base_northsouth",
-      "x": 180,
       "y": 270,
       "uvlock": true
     },
@@ -122,14 +117,11 @@
     },
     "facing=south,half=top,shape=inner_left": {
       "model": "oxide:block/rusted_iron_scaffold_stairs/top_inner_south_east",
-      "x": 180,
-      "y": 90,
       "uvlock": true
     },
     "facing=south,half=top,shape=inner_right": {
       "model": "oxide:block/rusted_iron_scaffold_stairs/top_inner_west_south",
-      "x": 180,
-      "y": 180,
+      "y": 90,
       "uvlock": true
     },
     "facing=south,half=top,shape=outer_left": {
@@ -146,7 +138,6 @@
     },
     "facing=south,half=top,shape=straight": {
       "model": "oxide:block/rusted_iron_scaffold_stairs/top_base_northsouth",
-      "x": 180,
       "y": 90,
       "uvlock": true
     },
@@ -177,14 +168,12 @@
     },
     "facing=west,half=top,shape=inner_left": {
       "model": "oxide:block/rusted_iron_scaffold_stairs/top_inner_west_south",
-      "x": 180,
-      "y": 180,
+      "y": 90,
       "uvlock": true
     },
     "facing=west,half=top,shape=inner_right": {
       "model": "oxide:block/rusted_iron_scaffold_stairs/top_inner_north_west",
-      "x": 180,
-      "y": 270,
+      "y": 180,
       "uvlock": true
     },
     "facing=west,half=top,shape=outer_left": {
@@ -201,7 +190,6 @@
     },
     "facing=west,half=top,shape=straight": {
       "model": "oxide:block/rusted_iron_scaffold_stairs/top_base_eastwest",
-      "x": 180,
       "y": 180,
       "uvlock": true
     }

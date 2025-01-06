@@ -3,8 +3,8 @@
   "textures": {
     "bottom": "oxide:block/rusted_iron_scaffold/side",
     "top": "oxide:block/rusted_iron_scaffold_stairs/top/lat",
-    "north": "oxide:block/rusted_iron_scaffold_stairs/lne",
-	"south": "oxide:block/rusted_iron_scaffold_stairs/lnw",
+    "north": "oxide:block/rusted_iron_scaffold_stairs/lnw",
+	"south": "oxide:block/rusted_iron_scaffold_stairs/lne",
 	"west": "oxide:block/rusted_iron_scaffold_stairs/lat",
 	"east": "oxide:block/rusted_iron_scaffold/side_top"
   }

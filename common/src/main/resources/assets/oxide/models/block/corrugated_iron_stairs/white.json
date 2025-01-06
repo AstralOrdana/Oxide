@@ -1,0 +1,8 @@
+{
+  "parent": "minecraft:block/stairs",
+  "textures": {
+    "bottom": "oxide:block/corrugated_iron/white",
+    "side": "oxide:block/corrugated_iron/white",
+    "top": "oxide:block/corrugated_iron/white_stairs"
+  }
+}
