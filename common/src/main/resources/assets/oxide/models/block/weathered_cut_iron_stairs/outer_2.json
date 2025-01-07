@@ -1,0 +1,8 @@
+{
+  "parent": "minecraft:block/outer_stairs",
+  "textures": {
+    "bottom": "oxide:block/weathered_cut_iron/2",
+    "side": "oxide:block/weathered_cut_iron/2",
+    "top": "oxide:block/weathered_cut_iron/2"
+  }
+}
