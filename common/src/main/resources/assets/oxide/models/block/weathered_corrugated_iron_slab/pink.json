@@ -1,0 +1,8 @@
+{
+  "parent": "minecraft:block/slab",
+  "textures": {
+    "bottom": "oxide:block/weathered_corrugated_iron/pink",
+    "side": "oxide:block/weathered_corrugated_iron/pink",
+    "top": "oxide:block/weathered_corrugated_iron/pink"
+  }
+}
