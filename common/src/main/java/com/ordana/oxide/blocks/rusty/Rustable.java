@@ -138,7 +138,7 @@ public interface Rustable extends ChangeOverTimeBlock<Rustable.RustLevel> {
         for (Direction dir : Direction.values()) {
             var dirPos = pos.relative(dir);
             var dirState = level.getBlockState(dirPos);
-            if (dirState.isAir()) airCheck += 1;
+            if (dirState.isAir() || dirState.is(ModTags.SCAFFOLDS)) airCheck += 1;
 
             if (level.isRainingAt(dirPos)) {
                 if (dir == Direction.UP) wetness += 5;

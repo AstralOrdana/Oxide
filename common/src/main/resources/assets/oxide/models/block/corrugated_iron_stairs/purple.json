@@ -1,0 +1,8 @@
+{
+  "parent": "oxide:block/stairs_straight",
+  "textures": {
+    "bottom": "oxide:block/corrugated_iron/purple",
+    "side": "oxide:block/corrugated_iron/purple",
+    "top": "oxide:block/corrugated_iron/purple"
+  }
+}
