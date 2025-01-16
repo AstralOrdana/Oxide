@@ -27,7 +27,7 @@ public class RotatableSlabBlock extends RustableSlabBlock {
         var bl = Objects.requireNonNull(context.getPlayer()).isSecondaryUseActive();
         var dir = context.getHorizontalDirection();
         if (blockState.is(this)) {
-            return blockState.setValue(TYPE, SlabType.DOUBLE).setValue(WATERLOGGED, false);
+            return blockState.setValue(TYPE, SlabType.DOUBLE).setValue(WATERLOGGED, false).setValue(FACING, bl ? dir.getOpposite() : dir);
         } return this.defaultBlockState().setValue(FACING, bl ? dir.getOpposite() : dir);
     }
 
