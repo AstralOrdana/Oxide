@@ -2,6 +2,7 @@ package com.ordana.oxide.reg;
 
 import com.ordana.oxide.Oxide;
 import com.ordana.oxide.items.*;
+import net.mehvahdjukaar.moonlight.api.fluids.SoftFluidStack;
 import net.mehvahdjukaar.moonlight.api.platform.RegHelper;
 import net.minecraft.core.component.DataComponents;
 import net.minecraft.world.item.Item;
@@ -26,7 +27,7 @@ public class ModItems {
 
     public static final Supplier<Item> VARNISH_SPRAYER = regItem("varnish_sprayer", (properties) ->
             new VarnishSprayer(properties.component(ModComponents.MAX_DROPS.get(), 128)
-                    //dont initialize other component as it needs a level
+                    .delayedComponent(ModComponents.FLUID.get(), (level)->SFStackView.of(SoftFluidStack.empty(level)))
                     .stacksTo(1)));
 
     public static final Supplier<Item> RUSTY_NAIL = regItem("rusty_nail", (properties) ->

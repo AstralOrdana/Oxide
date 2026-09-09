@@ -76,18 +76,17 @@ public class ChargeSprayerRecipe extends CustomRecipe {
     @Override
     public ItemStack assemble(CraftingInput inv) {
         int newTotalCharges = 0;
-        ItemStack arrow = null;
+        ItemStack sprayer = null;
         for (int i = 0; i < inv.size(); ++i) {
             ItemStack stack = inv.getItem(i);
             if (sprayerIngredient.test(stack)) {
-                arrow = stack;
+                sprayer = stack;
             }
         }
 
-        int maxCharges = arrow.getOrDefault(ModComponents.MAX_DROPS.get(), 0);
-        ItemStack returnSpray = arrow.copy();
-        SoftFluidStack sf = VarnishSprayer.getFluidComponent(returnSpray, Oxide.server.registryAccess())
-                .toMutable();
+        int maxCharges = sprayer.getOrDefault(ModComponents.MAX_DROPS.get(), 0);
+        ItemStack returnSpray = sprayer.copy();
+        SoftFluidStack sf = returnSpray.get(ModComponents.FLUID.get()).toMutable();
         sf.setCount(Math.min(maxCharges, sf.getCount() + newTotalCharges));
         VarnishSprayer.setFluidComponent(returnSpray, sf);
 

@@ -1,7 +1,6 @@
 //? fabric {
 package com.ordana.oxide.fabric.data.provider;
 
-
 import com.ordana.oxide.Oxide;
 import com.ordana.oxide.reg.ModBlocks;
 import net.fabricmc.fabric.api.client.datagen.v1.provider.FabricModelProvider;

@@ -17,8 +17,6 @@ public class Oxide {
 
     public static final String MOD_ID = "oxide";
     public static final Logger LOGGER = LogManager.getLogger();
-    @ApiStatus.Internal
-    public static MinecraftServer server;
 
 	public static Identifier res(String name) {
         return Identifier.fromNamespaceAndPath(MOD_ID, name);

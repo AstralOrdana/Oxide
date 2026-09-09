@@ -17,9 +17,6 @@ public class OxideFabric implements ModInitializer {
         Oxide.commonInit();
 
         PlatHelper.addCommonSetup(ModSetup::setup);
-        ServerLifecycleEvents.SERVER_STARTED.register(server -> {
-            Oxide.server = server;
-        });
     }
 }
 //?}

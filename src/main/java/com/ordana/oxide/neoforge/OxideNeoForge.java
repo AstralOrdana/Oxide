@@ -20,10 +20,5 @@ public class OxideNeoForge {
         PlatHelper.addCommonSetup(ModSetup::setup);
     }
 
-    @SubscribeEvent
-    public static void saveServerReference(ServerStartedEvent event) {
-        Oxide.server = event.getServer();
-    }
-
 }
 *///?}
