@@ -68,7 +68,8 @@ public class CementedRebarBlock extends RebarBlock {
         super.playerDestroy(level, player, pos, state, blockEntity, tool);
     }
 
-    public @NotNull ItemStack getCloneItemStack(LevelReader level, BlockPos pos, BlockState state) {
+    @Override
+    protected ItemStack getCloneItemStack(LevelReader level, BlockPos pos, BlockState state, boolean includeData) {
         return new ItemStack(ModBlocks.REBAR.get());
     }
 
@@ -182,7 +183,7 @@ public class CementedRebarBlock extends RebarBlock {
         }
     }
 
-
+    @Override
     public BlockState updateShape(BlockState state, Direction direction, BlockState neighborState, LevelAccessor level, BlockPos pos, BlockPos neighborPos) {
 
         level.scheduleTick(pos, this, FLOW_RATE);

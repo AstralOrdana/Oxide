@@ -72,7 +72,7 @@ public class RustableScaffoldStairsBlock extends ModStairBlock implements Rustab
         return 1.0F;
     }
 
-    public boolean propagatesSkylightDown(BlockState state, BlockGetter level, BlockPos pos) {
+    public boolean propagatesSkylightDown(BlockState state) {
         return true;
     }
 

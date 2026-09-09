@@ -52,7 +52,8 @@ public class CementSlabBlock extends WeatherableSlabBlock implements Fallable, S
         this.registerDefaultState(this.defaultBlockState().setValue(OVERHANG, 0).setValue(TYPE, SlabType.BOTTOM).setValue(WATERLOGGED, false));
     }
 
-    public @NotNull ItemStack getCloneItemStack(LevelReader level, BlockPos pos, BlockState state) {
+    @Override
+    protected ItemStack getCloneItemStack(LevelReader level, BlockPos pos, BlockState state, boolean includeData) {
         return new ItemStack(ModItems.CEMENT_BUCKET.get());
     }
 

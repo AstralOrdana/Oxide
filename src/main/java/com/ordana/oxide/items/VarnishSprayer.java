@@ -193,8 +193,8 @@ public class VarnishSprayer extends Item
         return true;
     }
     //?} else {
-    /*
-    @Override
+    
+    /*@Override
     public boolean shouldCauseReequipAnimation(ItemStack oldStack, ItemStack newStack, boolean slotChanged) {
         if (slotChanged) return true;
         SFStackView sf = oldStack.get(ModComponents.FLUID.get());

@@ -50,7 +50,8 @@ public class CementBlock extends WeatherableBlock implements Fallable, Weatherab
         builder.add(OVERHANG);
     }
 
-    public @NotNull ItemStack getCloneItemStack(LevelReader level, BlockPos pos, BlockState state) {
+    @Override
+    protected ItemStack getCloneItemStack(LevelReader level, BlockPos pos, BlockState state, boolean includeData) {
         return new ItemStack(ModItems.CEMENT_BUCKET.get());
     }
 
@@ -122,6 +123,7 @@ public class CementBlock extends WeatherableBlock implements Fallable, Weatherab
         return i.orElse(maxOverhang);
     }
 
+    @Override
     public void animateTick(BlockState state, Level level, BlockPos pos, RandomSource random) {
         if (state.getValue(OVERHANG) == maxOverhang - 1 && random.nextInt(16) == 0 && FallingBlock.isFree(level.getBlockState(pos.below()))) {
             double d = (double) pos.getX() + random.nextDouble();

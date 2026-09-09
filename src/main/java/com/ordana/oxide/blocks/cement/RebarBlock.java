@@ -77,7 +77,8 @@ public class RebarBlock extends Block implements SimpleWaterloggedBlock {
         return false;
     }
 
-    protected VoxelShape getOcclusionShape(BlockState state, BlockGetter level, BlockPos pos) {
+    @Override
+    protected VoxelShape getOcclusionShape(BlockState state) {
         return Shapes.empty();
     }
 
@@ -144,15 +145,17 @@ public class RebarBlock extends Block implements SimpleWaterloggedBlock {
                 .setValue(WEST_UPPER, upperCheck(level.getBlockState(pos.west()), Direction.WEST));
     }
 
-
+    @Override
     protected @NotNull FluidState getFluidState(BlockState state) {
         return state.getValue(WATERLOGGED) ? Fluids.WATER.getSource(false) : super.getFluidState(state);
     }
 
-    protected boolean propagatesSkylightDown(BlockState state, BlockGetter level, BlockPos pos) {
+    @Override
+    protected boolean propagatesSkylightDown(BlockState state) {
         return true;
     }
 
+    @Override
     protected @NotNull BlockState rotate(BlockState state, Rotation rotation) {
         return state
                 .setValue(PROPERTY_BY_DIRECTION.get(rotation.rotate(Direction.NORTH)), state.getValue(NORTH))
@@ -163,15 +166,17 @@ public class RebarBlock extends Block implements SimpleWaterloggedBlock {
                 .setValue(PROPERTY_BY_DIRECTION.get(rotation.rotate(Direction.DOWN)), state.getValue(DOWN));
     }
 
+    @Override
     protected @NotNull BlockState mirror(BlockState state, Mirror mirror) {
         return state.setValue(PROPERTY_BY_DIRECTION.get(mirror.mirror(Direction.NORTH)), state.getValue(NORTH)).setValue(PROPERTY_BY_DIRECTION.get(mirror.mirror(Direction.SOUTH)), state.getValue(SOUTH)).setValue(PROPERTY_BY_DIRECTION.get(mirror.mirror(Direction.EAST)), state.getValue(EAST)).setValue(PROPERTY_BY_DIRECTION.get(mirror.mirror(Direction.WEST)), state.getValue(WEST)).setValue(PROPERTY_BY_DIRECTION.get(mirror.mirror(Direction.UP)), state.getValue(UP)).setValue(PROPERTY_BY_DIRECTION.get(mirror.mirror(Direction.DOWN)), state.getValue(DOWN));
     }
 
+    @Override
     protected void createBlockStateDefinition(StateDefinition.Builder<Block, BlockState> builder) {
         builder.add(UP, DOWN, NORTH, EAST, SOUTH, WEST, NORTH_UPPER, EAST_UPPER, SOUTH_UPPER, WEST_UPPER, WATERLOGGED);
     }
 
-
+    @Override
     public boolean canBeReplaced(BlockState state, BlockPlaceContext useContext) {
         ItemStack itemStack = useContext.getItemInHand();
         return itemStack.is(ModItems.CEMENT_BUCKET.get());

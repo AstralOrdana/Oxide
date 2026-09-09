@@ -57,7 +57,8 @@ public class ReinforcedCementBlock extends Block implements WeatherableCement {
 
     }
 
-    public @NotNull ItemStack getCloneItemStack(LevelReader level, BlockPos pos, BlockState state) {
+    @Override
+    protected ItemStack getCloneItemStack(LevelReader level, BlockPos pos, BlockState state, boolean includeData) {
         return new ItemStack(ModBlocks.REBAR.get());
     }
 
