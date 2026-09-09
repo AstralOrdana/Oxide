@@ -1,1 +1,1 @@
-# Template mod codebase for creating multiloader mods
+# Codebase of the Oxide mod

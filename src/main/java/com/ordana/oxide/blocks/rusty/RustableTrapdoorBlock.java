@@ -1,0 +1,54 @@
+package com.ordana.oxide.blocks.rusty;
+
+import com.ordana.oxide.entities.RustyNailEntity;
+import com.ordana.oxide.reg.ModBlockProperties;
+import com.ordana.oxide.reg.ModEntities;
+import net.minecraft.core.BlockPos;
+import net.minecraft.server.level.ServerLevel;
+import net.minecraft.util.RandomSource;
+import net.minecraft.world.entity.player.Player;
+import net.minecraft.world.item.ItemStack;
+import net.minecraft.world.level.gamerules.GameRules;
+import net.minecraft.world.level.Level;
+import net.minecraft.world.level.block.Block;
+import net.minecraft.world.level.block.TrapDoorBlock;
+import net.minecraft.world.level.block.entity.BlockEntity;
+import net.minecraft.world.level.block.state.BlockState;
+import net.minecraft.world.level.block.state.StateDefinition;
+import net.minecraft.world.level.block.state.properties.BlockSetType;
+import net.minecraft.world.level.block.state.properties.BooleanProperty;
+import org.jetbrains.annotations.Nullable;
+
+public class RustableTrapdoorBlock extends TrapDoorBlock implements Rustable {
+    public static final BooleanProperty VARNISHED = ModBlockProperties.VARNISHED;
+    private final Rustable.RustLevel rustLevel;
+
+    public RustableTrapdoorBlock(Rustable.RustLevel rustLevel, Properties properties) {
+        super(BlockSetType.IRON, Rustable.setRandomTicking(properties, rustLevel));
+        this.rustLevel = rustLevel;
+
+        this.registerDefaultState(this.defaultBlockState().setValue(VARNISHED, false).setValue(POWERED, false).setValue(OPEN, false));
+    }
+
+    public void playerDestroy(Level level, Player player, BlockPos pos, BlockState state, @Nullable BlockEntity blockEntity, ItemStack tool) {
+        if (rustLevel == RustLevel.RUSTED && !level.isClientSide() && level.getRandom().nextFloat() <= 0.1f && level.getServer().getGameRules().get(GameRules.MOB_DROPS)) {
+            RustyNailEntity nail = new RustyNailEntity(level, player, ModEntities.RUSTY_NAIL.get());
+            nail.setPos(pos.getX() + 0.5, pos.getY() + 0.5, pos.getZ() + 0.5);
+            level.addFreshEntity(nail);
+        }
+        super.playerDestroy(level, player, pos, state, blockEntity, tool);
+    }
+
+    @Override
+    public void randomTick(BlockState state, ServerLevel serverLevel, BlockPos pos, RandomSource random) {
+        if (!state.getValue(VARNISHED)) this.tryWeather(state, serverLevel, pos, random);
+    }
+
+    public Rustable.RustLevel getAge() {
+        return this.rustLevel;
+    }
+
+    protected void createBlockStateDefinition(StateDefinition.Builder<Block, BlockState> builder) {
+        builder.add(FACING, OPEN, HALF, POWERED, WATERLOGGED, VARNISHED);
+    }
+}

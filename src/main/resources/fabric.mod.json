@@ -1,0 +1,33 @@
+{
+  "schemaVersion": 1,
+  "id": "${mod_id}",
+  "version": "${mod_version}",
+  "name": "${mod_name}",
+  "description": "${mod_description}",
+  "authors": [
+    "${mod_authors}"
+  ],
+  "contact": {
+    "homepage": "${mod_homepage}",
+    "sources": "${mod_github}"
+  },
+  "license": "${mod_license}",
+  "icon": "icon.gif",
+  "environment": "*",
+  "entrypoints": {
+    "main": [
+      "com.ordana.oxide.fabric.OxideFabric"
+    ],
+    "rrv": [
+      "com.ordana.oxide.integrations.RrvIntegration"
+    ]
+  },
+  "mixins": [
+    "oxide.mixins.json"
+  ],
+  "depends": {
+    "fabric-api": "*",
+    "minecraft": "~26.1",
+    "moonlight": ">=1.21-2.17.34"
+  }
+}

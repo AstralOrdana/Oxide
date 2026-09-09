@@ -1,0 +1,63 @@
+package com.ordana.oxide.blocks.rusty;
+
+import com.ordana.oxide.entities.RustyNailEntity;
+import com.ordana.oxide.reg.ModBlockProperties;
+import com.ordana.oxide.reg.ModEntities;
+import net.minecraft.core.BlockPos;
+import net.minecraft.server.level.ServerLevel;
+import net.minecraft.util.RandomSource;
+import net.minecraft.world.InteractionHand;
+import net.minecraft.world.InteractionResult;
+import net.minecraft.world.entity.player.Player;
+import net.minecraft.world.item.ItemStack;
+import net.minecraft.world.level.gamerules.GameRules;
+import net.minecraft.world.level.Level;
+import net.minecraft.world.level.block.Block;
+import net.minecraft.world.level.block.entity.BlockEntity;
+import net.minecraft.world.level.block.state.BlockState;
+import net.minecraft.world.level.block.state.StateDefinition;
+import net.minecraft.world.level.block.state.properties.BooleanProperty;
+import net.minecraft.world.phys.BlockHitResult;
+import org.jetbrains.annotations.Nullable;
+
+public class RustableBlock extends Block implements Rustable {
+    public static final BooleanProperty VARNISHED = ModBlockProperties.VARNISHED;
+    private final RustLevel rustLevel;
+
+    public RustableBlock(Properties settings, RustLevel rustLevel) {
+        this(rustLevel, settings);
+    }
+
+    public RustableBlock(RustLevel rustLevel, Properties settings) {
+        super(Rustable.setRandomTicking(settings, rustLevel));
+        this.rustLevel = rustLevel;
+        this.registerDefaultState(this.defaultBlockState().setValue(VARNISHED, false));
+    }
+
+    @Override
+    public RustLevel getAge() {
+        return this.rustLevel;
+    }
+
+    @Override
+    public void randomTick(BlockState state, ServerLevel serverLevel, BlockPos pos, RandomSource random) {
+        if (!state.getValue(VARNISHED)) this.tryWeather(state, serverLevel, pos, random);
+    }
+
+    public InteractionResult useItemOn(ItemStack stack, BlockState state, Level level, BlockPos pos, Player player, InteractionHand hand, BlockHitResult hitResult) {
+        return this.use(stack, state, level, pos, player, hand, hitResult);
+    }
+
+    public void playerDestroy(Level level, Player player, BlockPos pos, BlockState state, @Nullable BlockEntity blockEntity, ItemStack tool) {
+        if (rustLevel == RustLevel.RUSTED && !level.isClientSide() && level.getRandom().nextFloat() <= 0.1f && level.getServer().getGameRules().get(GameRules.MOB_DROPS)) {
+            RustyNailEntity nail = new RustyNailEntity(level, player, ModEntities.RUSTY_NAIL.get());
+            nail.setPos(pos.getX() + 0.5, pos.getY() + 0.5, pos.getZ() + 0.5);
+            level.addFreshEntity(nail);
+        }
+        super.playerDestroy(level, player, pos, state, blockEntity, tool);
+    }
+
+    protected void createBlockStateDefinition(StateDefinition.Builder<Block, BlockState> builder) {
+        builder.add(VARNISHED);
+    }
+}
