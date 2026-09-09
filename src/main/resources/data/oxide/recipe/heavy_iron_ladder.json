@@ -1,20 +1,16 @@
 {
-  "type": "minecraft:crafting_shaped",
-  "key": {
-    "#": {
-      "item": "oxide:plate_iron"
-    },
-    "/": {
-      "item": "minecraft:iron_ingot"
-    }
-  },
-  "pattern": [
-    "# #",
-    "#/#",
-    "# #"
-  ],
-  "result": {
-    "count": 12,
-    "id": "oxide:heavy_iron_ladder"
-  }
+ "type": "minecraft:crafting_shaped",
+ "key": {
+  "#": "oxide:plate_iron",
+  "/": "minecraft:iron_ingot"
+ },
+ "pattern": [
+  "# #",
+  "#/#",
+  "# #"
+ ],
+ "result": {
+  "count": 12,
+  "id": "oxide:heavy_iron_ladder"
+ }
 }

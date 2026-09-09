@@ -1,17 +1,15 @@
 {
-  "type": "minecraft:crafting_shaped",
-  "category": "building",
-  "key": {
-    "#": {
-      "item": "oxide:stock_bricks"
-    }
-  },
-  "pattern": [
-    "###",
-    "###"
-  ],
-  "result": {
-    "count": 6,
-    "id": "oxide:stock_brick_wall"
-  }
+ "type": "minecraft:crafting_shaped",
+ "category": "building",
+ "key": {
+  "#": "oxide:stock_bricks"
+ },
+ "pattern": [
+  "###",
+  "###"
+ ],
+ "result": {
+  "count": 6,
+  "id": "oxide:stock_brick_wall"
+ }
 }

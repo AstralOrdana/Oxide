@@ -1,10 +1,8 @@
 {
-  "type": "minecraft:stonecutting",
-  "ingredient": {
-    "item": "oxide:cinder_blocks"
-  },
-  "result": {
-    "count": 4,
-    "id": "oxide:cinder_block"
-  }
+ "type": "minecraft:stonecutting",
+ "ingredient": "oxide:cinder_blocks",
+ "result": {
+  "count": 4,
+  "id": "oxide:cinder_block"
+ }
 }

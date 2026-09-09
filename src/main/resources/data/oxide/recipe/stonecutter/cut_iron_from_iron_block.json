@@ -1,10 +1,8 @@
 {
-  "type": "minecraft:stonecutting",
-  "ingredient": {
-    "item": "minecraft:iron_block"
-  },
-  "result": {
-    "count": 4,
-    "id": "oxide:cut_iron"
-  }
+ "type": "minecraft:stonecutting",
+ "ingredient": "minecraft:iron_block",
+ "result": {
+  "count": 4,
+  "id": "oxide:cut_iron"
+ }
 }

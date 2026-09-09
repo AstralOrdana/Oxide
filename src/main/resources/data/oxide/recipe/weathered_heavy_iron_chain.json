@@ -1,20 +1,16 @@
 {
-  "type": "minecraft:crafting_shaped",
-  "key": {
-    "#": {
-      "item": "minecraft:iron_ingot"
-    },
-    "G": {
-      "item": "oxide:weathered_plate_iron"
-    }
-  },
-  "pattern": [
-    "#",
-    "G",
-    "#"
-  ],
-  "result": {
-    "count": 16,
-    "id": "oxide:weathered_heavy_iron_chain"
-  }
+ "type": "minecraft:crafting_shaped",
+ "key": {
+  "#": "minecraft:iron_ingot",
+  "G": "oxide:weathered_plate_iron"
+ },
+ "pattern": [
+  "#",
+  "G",
+  "#"
+ ],
+ "result": {
+  "count": 16,
+  "id": "oxide:weathered_heavy_iron_chain"
+ }
 }

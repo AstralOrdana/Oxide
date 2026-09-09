@@ -1,17 +1,15 @@
 {
-  "type": "minecraft:crafting_shaped",
-  "category": "building",
-  "key": {
-    "#": {
-      "item": "oxide:weathered_plate_iron"
-    }
-  },
-  "pattern": [
-    "##",
-    "##"
-  ],
-  "result": {
-    "count": 4,
-    "id": "oxide:weathered_cut_iron"
-  }
+ "type": "minecraft:crafting_shaped",
+ "category": "building",
+ "key": {
+  "#": "oxide:weathered_plate_iron"
+ },
+ "pattern": [
+  "##",
+  "##"
+ ],
+ "result": {
+  "count": 4,
+  "id": "oxide:weathered_cut_iron"
+ }
 }

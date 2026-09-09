@@ -1,21 +1,17 @@
 {
-  "type": "minecraft:crafting_shaped",
-  "category": "building",
-  "key": {
-    "#": {
-      "item": "minecraft:iron_ingot"
-    },
-    "G": {
-      "item": "oxide:plate_iron"
-    }
-  },
-  "pattern": [
-    "# #",
-    " G ",
-    "# #"
-  ],
-  "result": {
-    "count": 16,
-    "id": "oxide:iron_scaffold"
-  }
+ "type": "minecraft:crafting_shaped",
+ "category": "building",
+ "key": {
+  "#": "minecraft:iron_ingot",
+  "G": "oxide:plate_iron"
+ },
+ "pattern": [
+  "# #",
+  " G ",
+  "# #"
+ ],
+ "result": {
+  "count": 16,
+  "id": "oxide:iron_scaffold"
+ }
 }

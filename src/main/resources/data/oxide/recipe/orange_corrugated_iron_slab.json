@@ -1,17 +1,15 @@
 {
-  "type": "minecraft:crafting_shaped",
-  "group": "corrugated_slab",
-  "category": "building",
-  "key": {
-    "#": {
-      "item": "oxide:orange_corrugated_iron"
-    }
-  },
-  "pattern": [
-    "###"
-  ],
-  "result": {
-    "count": 6,
-    "id": "oxide:orange_corrugated_iron_slab"
-  }
+ "type": "minecraft:crafting_shaped",
+ "group": "corrugated_slab",
+ "category": "building",
+ "key": {
+  "#": "oxide:orange_corrugated_iron"
+ },
+ "pattern": [
+  "###"
+ ],
+ "result": {
+  "count": 6,
+  "id": "oxide:orange_corrugated_iron_slab"
+ }
 }

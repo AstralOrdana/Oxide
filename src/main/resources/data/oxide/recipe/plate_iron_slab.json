@@ -1,16 +1,14 @@
 {
-  "type": "minecraft:crafting_shaped",
-  "category": "building",
-  "key": {
-    "#": {
-      "item": "oxide:plate_iron"
-    }
-  },
-  "pattern": [
-    "###"
-  ],
-  "result": {
-    "count": 6,
-    "id": "oxide:plate_iron_slab"
-  }
+ "type": "minecraft:crafting_shaped",
+ "category": "building",
+ "key": {
+  "#": "oxide:plate_iron"
+ },
+ "pattern": [
+  "###"
+ ],
+ "result": {
+  "count": 6,
+  "id": "oxide:plate_iron_slab"
+ }
 }

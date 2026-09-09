@@ -1,20 +1,16 @@
 {
-  "type": "minecraft:crafting_shaped",
-  "category": "building",
-  "key": {
-    "#": {
-      "item": "oxide:cinder_bricks"
-    },
-    "D": {
-      "item": "minecraft:gravel"
-    }
-  },
-  "pattern": [
-    "D#",
-    "#D"
-  ],
-  "result": {
-    "count": 2,
-    "id": "oxide:weathered_cinder_bricks"
-  }
+ "type": "minecraft:crafting_shaped",
+ "category": "building",
+ "key": {
+  "#": "oxide:cinder_bricks",
+  "D": "minecraft:gravel"
+ },
+ "pattern": [
+  "D#",
+  "#D"
+ ],
+ "result": {
+  "count": 2,
+  "id": "oxide:weathered_cinder_bricks"
+ }
 }

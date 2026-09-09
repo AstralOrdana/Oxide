@@ -1,36 +1,18 @@
 {
-  "type": "crafting_shapeless",
-  "ingredients": [
-    {
-      "item": "minecraft:gravel"
-    },
-    {
-      "item": "minecraft:sand"
-    },
-    {
-      "item": "minecraft:gravel"
-    },
-    {
-      "item": "minecraft:sugar"
-    },
-    {
-      "item": "minecraft:bucket"
-    },
-    {
-      "item": "minecraft:sugar"
-    },
-    {
-      "item": "minecraft:gravel"
-    },
-    {
-      "item": "minecraft:sand"
-    },
-    {
-      "item": "minecraft:gravel"
-    }
-  ],
-  "result": {
-    "id": "oxide:cement_powder_bucket",
-    "count": 1
-  }
+ "type": "crafting_shapeless",
+ "ingredients": [
+  "minecraft:gravel",
+  "minecraft:sand",
+  "minecraft:gravel",
+  "minecraft:sugar",
+  "minecraft:bucket",
+  "minecraft:sugar",
+  "minecraft:gravel",
+  "minecraft:sand",
+  "minecraft:gravel"
+ ],
+ "result": {
+  "id": "oxide:cement_powder_bucket",
+  "count": 1
+ }
 }

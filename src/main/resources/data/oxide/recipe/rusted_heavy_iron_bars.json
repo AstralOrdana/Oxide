@@ -1,16 +1,14 @@
 {
-  "type": "minecraft:crafting_shaped",
-  "key": {
-    "#": {
-      "item": "oxide:rusted_plate_iron"
-    }
-  },
-  "pattern": [
-    "###",
-    "###"
-  ],
-  "result": {
-    "count": 16,
-    "id": "oxide:rusted_heavy_iron_bars"
-  }
+ "type": "minecraft:crafting_shaped",
+ "key": {
+  "#": "oxide:rusted_plate_iron"
+ },
+ "pattern": [
+  "###",
+  "###"
+ ],
+ "result": {
+  "count": 16,
+  "id": "oxide:rusted_heavy_iron_bars"
+ }
 }

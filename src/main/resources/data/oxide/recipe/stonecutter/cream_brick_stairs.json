@@ -1,10 +1,8 @@
 {
-  "type": "minecraft:stonecutting",
-  "ingredient": {
-    "item": "oxide:cream_bricks"
-  },
-  "result": {
-    "count": 1,
-    "id": "oxide:cream_brick_stairs"
-  }
+ "type": "minecraft:stonecutting",
+ "ingredient": "oxide:cream_bricks",
+ "result": {
+  "count": 1,
+  "id": "oxide:cream_brick_stairs"
+ }
 }

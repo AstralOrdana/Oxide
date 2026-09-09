@@ -1,10 +1,8 @@
 {
-  "type": "minecraft:stonecutting",
-  "ingredient": {
-    "item": "oxide:weathered_plate_iron"
-  },
-  "result": {
-    "count": 8,
-    "id": "oxide:weathered_heavy_iron_chain"
-  }
+ "type": "minecraft:stonecutting",
+ "ingredient": "oxide:weathered_plate_iron",
+ "result": {
+  "count": 8,
+  "id": "oxide:weathered_heavy_iron_chain"
+ }
 }

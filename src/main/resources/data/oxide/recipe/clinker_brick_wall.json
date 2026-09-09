@@ -1,17 +1,15 @@
 {
-  "type": "minecraft:crafting_shaped",
-  "category": "building",
-  "key": {
-    "#": {
-      "item": "oxide:clinker_bricks"
-    }
-  },
-  "pattern": [
-    "###",
-    "###"
-  ],
-  "result": {
-    "count": 6,
-    "id": "oxide:clinker_brick_wall"
-  }
+ "type": "minecraft:crafting_shaped",
+ "category": "building",
+ "key": {
+  "#": "oxide:clinker_bricks"
+ },
+ "pattern": [
+  "###",
+  "###"
+ ],
+ "result": {
+  "count": 6,
+  "id": "oxide:clinker_brick_wall"
+ }
 }

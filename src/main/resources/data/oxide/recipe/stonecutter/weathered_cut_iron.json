@@ -1,9 +1,7 @@
 {
-  "type": "minecraft:stonecutting",
-  "ingredient": {
-    "item": "oxide:weathered_plate_iron"
-  },
-  "result": {
-    "id": "oxide:weathered_cut_iron"
-  }
+ "type": "minecraft:stonecutting",
+ "ingredient": "oxide:weathered_plate_iron",
+ "result": {
+  "id": "oxide:weathered_cut_iron"
+ }
 }

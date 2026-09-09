@@ -1,19 +1,15 @@
 {
-  "type": "minecraft:crafting_shaped",
-  "key": {
-    "#": {
-      "item": "oxide:weathered_plate_iron"
-    },
-    "/": {
-      "item": "minecraft:iron_ingot"
-    }
-  },
-  "pattern": [
-    "#/#",
-    "#/#"
-  ],
-  "result": {
-    "count": 8,
-    "id": "oxide:weathered_wrought_iron_fence"
-  }
+ "type": "minecraft:crafting_shaped",
+ "key": {
+  "#": "oxide:weathered_plate_iron",
+  "/": "minecraft:iron_ingot"
+ },
+ "pattern": [
+  "#/#",
+  "#/#"
+ ],
+ "result": {
+  "count": 8,
+  "id": "oxide:weathered_wrought_iron_fence"
+ }
 }

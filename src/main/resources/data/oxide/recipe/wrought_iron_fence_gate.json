@@ -1,19 +1,15 @@
 {
-  "type": "minecraft:crafting_shaped",
-  "key": {
-    "#": {
-      "item": "oxide:plate_iron"
-    },
-    "/": {
-      "item": "minecraft:iron_ingot"
-    }
-  },
-  "pattern": [
-    "/#/",
-    "/#/"
-  ],
-  "result": {
-    "count": 4,
-    "id": "oxide:wrought_iron_fence_gate"
-  }
+ "type": "minecraft:crafting_shaped",
+ "key": {
+  "#": "oxide:plate_iron",
+  "/": "minecraft:iron_ingot"
+ },
+ "pattern": [
+  "/#/",
+  "/#/"
+ ],
+ "result": {
+  "count": 4,
+  "id": "oxide:wrought_iron_fence_gate"
+ }
 }

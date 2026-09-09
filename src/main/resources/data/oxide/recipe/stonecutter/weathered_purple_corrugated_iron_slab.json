@@ -1,10 +1,8 @@
 {
-  "type": "minecraft:stonecutting",
-  "ingredient": {
-    "item": "oxide:weathered_purple_corrugated_iron"
-  },
-  "result": {
-    "count": 2,
-    "id": "oxide:weathered_purple_corrugated_iron_slab"
-  }
+ "type": "minecraft:stonecutting",
+ "ingredient": "oxide:weathered_purple_corrugated_iron",
+ "result": {
+  "count": 2,
+  "id": "oxide:weathered_purple_corrugated_iron_slab"
+ }
 }

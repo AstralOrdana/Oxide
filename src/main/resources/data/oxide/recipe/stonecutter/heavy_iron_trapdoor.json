@@ -1,10 +1,8 @@
 {
-  "type": "minecraft:stonecutting",
-  "ingredient": {
-    "item": "oxide:plate_iron"
-  },
-  "result": {
-    "count": 4,
-    "id": "oxide:heavy_iron_trapdoor"
-  }
+ "type": "minecraft:stonecutting",
+ "ingredient": "oxide:plate_iron",
+ "result": {
+  "count": 4,
+  "id": "oxide:heavy_iron_trapdoor"
+ }
 }

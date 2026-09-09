@@ -1,21 +1,17 @@
 {
-  "type": "crafting_shapeless",
-  "ingredients": [
-    {
-      "item": "oxide:varnish_sprayer"
-    },
-    {
-      "item": "minecraft:lava_bucket"
-    }
-  ],
-  "result": {
-    "id": "oxide:varnish_sprayer",
-    "components": {
-      "oxide:fluid": {
-        "count": 128,
-        "id": "moonlight:lava"
-      }
-    },
-    "count": 1
-  }
+ "type": "crafting_shapeless",
+ "ingredients": [
+  "oxide:varnish_sprayer",
+  "minecraft:lava_bucket"
+ ],
+ "result": {
+  "id": "oxide:varnish_sprayer",
+  "components": {
+   "oxide:fluid": {
+    "count": 128,
+    "id": "moonlight:lava"
+   }
+  },
+  "count": 1
+ }
 }

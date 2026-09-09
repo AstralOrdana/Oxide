@@ -1,10 +1,8 @@
 {
-  "type": "minecraft:stonecutting",
-  "ingredient": {
-    "item": "oxide:rusted_plate_iron"
-  },
-  "result": {
-    "count": 8,
-    "id": "oxide:rusted_heavy_iron_bars"
-  }
+ "type": "minecraft:stonecutting",
+ "ingredient": "oxide:rusted_plate_iron",
+ "result": {
+  "count": 8,
+  "id": "oxide:rusted_heavy_iron_bars"
+ }
 }

@@ -1,16 +1,14 @@
 {
-  "type": "minecraft:crafting_shaped",
-  "category": "building",
-  "key": {
-    "#": {
-      "item": "oxide:weathered_iron_scaffold"
-    }
-  },
-  "pattern": [
-    "###"
-  ],
-  "result": {
-    "count": 6,
-    "id": "oxide:weathered_iron_scaffold_slab"
-  }
+ "type": "minecraft:crafting_shaped",
+ "category": "building",
+ "key": {
+  "#": "oxide:weathered_iron_scaffold"
+ },
+ "pattern": [
+  "###"
+ ],
+ "result": {
+  "count": 6,
+  "id": "oxide:weathered_iron_scaffold_slab"
+ }
 }

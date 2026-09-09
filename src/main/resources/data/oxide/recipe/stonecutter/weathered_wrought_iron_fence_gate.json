@@ -1,10 +1,8 @@
 {
-  "type": "minecraft:stonecutting",
-  "ingredient": {
-    "item": "oxide:weathered_plate_iron"
-  },
-  "result": {
-    "count": 4,
-    "id": "oxide:weathered_wrought_iron_fence_gate"
-  }
+ "type": "minecraft:stonecutting",
+ "ingredient": "oxide:weathered_plate_iron",
+ "result": {
+  "count": 4,
+  "id": "oxide:weathered_wrought_iron_fence_gate"
+ }
 }
