@@ -20,6 +20,9 @@
     ],
     "rrv": [
       "com.ordana.oxide.integrations.RrvIntegration"
+    ],
+    "fabric-datagen": [
+      "com.ordana.oxide.fabric.data.OxideDataGenerator"
     ]
   },
   "mixins": [
